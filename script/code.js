@@ -9,11 +9,12 @@ function greeting() {
 ///btnSubmit.addEventListener('click', greeting)
 //btnClick.addEventListener('click', greeting)
 
-const btnSubmit =
-document.querySelector('[data-submit]')
-btnSubmit.addEventListener('click', greeting)
+// const btnSubmit =
+// document.querySelector('[data-submit]')
+// btnSubmit.addEventListener('click', greeting)
 
-//let firstName = 'Joel'
+
+// let firstName = 'Joel'
 //console.log(firstName+ 'is working at Lifechoices');
 //firstName = 'David'
 //console.log(firstName+ 'stay in plumstead');
@@ -81,7 +82,7 @@ const lblOutput = document.querySelector(`#output`)
     'Keefah'                   // --arrays start counting from 0        and if you want to
                                // specifically get a position 
 ]*/
-//console.log(table) //***to find the position of the number u need
+//console.log(table) **to find the position of the number u need
 //console.log(`Element at position 3: $ {numbers[3]}`);
 //console.log(numbers.at(-1)) //specify the variable name, @ and -1
 
@@ -104,11 +105,11 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // //to create a new array------------------
 // console.log(newArr);
 
-// //removing the first element
+// removing the first element
 // data.shift()
 // console.log(data);
 
-// //adding using splice ------changes the contents of an array by removing or replacing existing elements/ or adding new elements in place.  To create a new array with a segment removed and/or replaced without mutating the original array, use toSpliced() .
+// adding using splice ------changes the contents of an array by removing or replacing existing elements/ or adding new elements in place.  To create a new array with a segment removed and/or replaced without mutating the original array, use toSpliced() .
 
 // data.splice(2,0, 'Joel')
 // console.log(data);
@@ -228,6 +229,8 @@ we make use of the if statement to compare*/
 //
 
 //--------------------------------------L O O P S ------------------------------------------------
+//Looping through arrays
+
 
 //Looping through a object 
 // let laptop = {
@@ -237,8 +240,9 @@ we make use of the if statement to compare*/
     
 // } 
 // /* console.log(laptop.make);
+
 // console.log(laptop.cpu);
-// console.log(laptop.ram); */
+// console.log(laptop.ram);
 // console.log(laptop)
 
 // //to display all the keys in a loop
@@ -256,6 +260,8 @@ we make use of the if statement to compare*/
 // Object.keys(laptop).forEach( (key) => {
 //     console.log(`${key}-> ${laptop[key]}`);
 // })
+
+
 
 // Object.values(laptop).forEach( (value)=> {
 //     console.log(`${value}`);
@@ -296,19 +302,46 @@ we make use of the if statement to compare*/
 // let car4 = JSON.parse(JSON.stringify(car1)) //converting your object to a string
 // console.log(car4);
 
-//Math methods : allows us to modify 
-let numbers = [2, 4, 11, 1]
-let a = 3
-let b = 2
-console.log(`Highest number: ${Math.max(...numbers)}`); //... is the spread operator 
-console.log(`Lowest number: ${Math.min(...numbers)}`);
-// 3^2 = 3 * 3
-console.log(`pow(x,y): ${Math.pow(a, b)}`);
-console.dir(Math);
+/*Math methods : allows us to modify*/
+// let numbers = [2, 4, 11, 1]
+// let a = 3
+// let b = 2
+// console.log(`Highest number: ${Math.max(...numbers)}`); //... is the spread operator 
+// console.log(`Lowest number: ${Math.min(...numbers)}`);
+// // 3^2 = 3 * 3
+// console.log(`pow(x,y): ${Math.pow(a, b)}`);
+// console.dir(Math);
+//continuing..........
+let numbers = [9, 4, 2, 5, 10]
 
-//string method
-let firstName = 'Tamlin'
-console.log(firstName.split("").reverse().join(""));
+// function highestNumber(arguments) {
+//     for(let number in arguments) {   //for 'of' will display the elements whereas  for 'in' will the index
+//         console.log(number);
+//     }
+// }
+// highestNumber(numbers)
+
+//longer method: 
+function highest(args) {
+    let x = args[0];
+    for(let m in args) {
+        if(args[m]>x) {
+            x=args[m]
+        }
+        //console.log(m);
+    }
+    console.log(x)
+}
+highest(numbers)
+
+//shorter method
+//numbers called a spread operator(...)
+console.log(Math.max(...numbers));
+
+Math.round() //is gonna round it off to the nearest integer
+//Strings
+// let firstName = 'Tamlin'
+// console.log(firstName.split("").reverse().join(""));
 
 /*
 Exercises on the below methods
@@ -327,28 +360,93 @@ Exercises on the below methods
 - slice()
 - split() */
 
-let rIdx = Math.floor(Math.random() * (numbers.length -1))
-console.log(numbers);
-console.log(rIdx);
-console.log(numbers[rIdx]);
+// let rIdx = Math.floor(Math.random() * (numbers.length -1))
+// console.log(numbers);
+// console.log(rIdx);
+// console.log(numbers[rIdx]);
 
-//map and reduce   //reduce takes two arguments x & y.  Reduce right means it starts from the right side. It returns only a single value.
-// map allows you to show only specific data that you request to see, eg. 'id' 
-let modify = numbers.map( (x)=> {
-    return x*2             //returning the product of the elements 
-})
+// //map and reduce   //reduce takes two arguments x & y.  Reduce right means it starts from the right side. It returns only a single value.
+// // map allows you to show only specific data that you request to see, eg. 'id' 
+// let modify = numbers.map( (x)=> {
+//     return x*2             //returning the product of the elements 
+// })
 
-console.log(modify);
-let sum = numbers.reduce((a, b)=> a + b)
-console.log(sum);
+// console.log(modify);
+// let sum = numbers.reduce((a, b)=> a + b)
+// console.log(sum);
 
-//Constructor (number, array, object)
-let x = Number(2)
-console.log(x);
+// //Constructor (number, array, object)
+// let x = Number(2)
+// console.log(x);
 
-let myArr = new Array(3, 5, 11)
-console.log(myArr);
+// let myArr = new Array(3, 5, 11)
+// console.log(myArr);
 
-let firstName = String("") //because you specifying an empty string
-console.log(firstName);
-//Fetch API
+// let firstName = String("") //because you specifying an empty string
+// console.log(firstName);
+
+
+// //Fetch API
+
+
+
+
+
+
+
+
+
+// //Create two objects and add the objects into an array, log the objects as well
+// let person1 = {
+//     firstName: 'Thimna'
+// }
+
+// let person2 = {
+//     firstName: 'Veronique'
+// }
+// //Create an empty array
+// let personDetails = []
+// personDetails.push(person1)
+// personDetails.push(person2)
+// console.log(personDetails);
+// console.log(person1);
+// console.log(person2);
+
+// //When to use an 'if' statement? 
+// // Use 'if' to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false.
+
+// let firstName = 'Zubair'
+// if(firstName) {
+//     console.log("Present");
+// }else {
+//     console.log("Absent");
+// }
+
+
+// let firstName = 'Zubair'
+// let state = 'late'
+// if(state == 'present') {
+//     console.log("present");
+// }else if(state){    //checking the value of state, if theres no value it will look for another 'else if' 
+//     console.log("late");
+// }else if(state){
+//     console.log("late -> Final warning");
+// }else {
+//     console.log("absent");
+// }
+
+//switch and case(checking for a condition) : switch can return multiple conditions 
+// switch(true) {
+//     case state == 'present': 
+//     console.log("present");
+//     break; 
+//     case state !="": //checking if state is not empty
+//     console.log("late");
+//     case state !="": 
+//     console.log("late -> Final warning");
+//     break; 
+//     default: 
+//     console.log("absent");
+//     break; 
+// }
+
