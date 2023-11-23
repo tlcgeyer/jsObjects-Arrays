@@ -1,7 +1,7 @@
 // named function
-function greeting() {
-    console.log("Hello there");
-}
+// function greeting() {
+//     console.log("Hello there");
+// }
 //Calling a function
 // greeting ()
 //const btnSubmit =
@@ -102,7 +102,7 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 //let lastRemovedElement = data.pop ()
 //console.log(lastRemovedElement); //concat can combine two arrays into one variable
 
-// //to create a new array------------------
+// to create a new array------------------
 // console.log(newArr);
 
 // removing the first element
@@ -114,7 +114,41 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // data.splice(2,0, 'Joel')
 // console.log(data);
 
-// //removing element using splice
+//--------------------S T R I N G    M E T H O D S----------------------------
+
+// let sentence = 'I love programming'
+// console.log(sentence.length);
+
+// array of characters using a string method---------------------
+// function arOfChars(sentence) {
+//     let characters = []
+//     for(let c of sentence) {
+//         characters.push(c)
+//     }
+//     return characters
+// }
+// console.log(arrOfChars(sentence));
+
+// to split a paragraph: 
+// console.log(sentence.split(" ")); //to split it
+// console.log(sentence.replace("love" , "hate"));
+
+// /list of methods: 
+// sentence.lastIndexOf() //returns the index of the last occurrence of a specified value in a string.  
+// sentence.endsWith() //returns true if a string ends with a specified string. 
+// sentence.startsWith()
+// sentence.includes()
+// sentence.indexOf()
+// sentence.concat()
+// sentence.match()
+
+// how to repeat a specific word in a sentence:  
+// console.log(" Love ".repeat(4));
+
+// how to add a emoji: 
+// console.log("Love❤️"); //windows then . 
+
+// removing element using splice: 
 // data.splice(3,2)
 // console.log(data);
 
@@ -136,10 +170,10 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // }
 
 
-// //to display the size of the array 
+// to display the size of the array 
 // length //property(a feature what you are looking for) of an array
 
-// //return the elements from a range
+// return the elements from a range
 // console.log(data.slice(1,4)); 
 
 // /* splice = add or remove
@@ -164,12 +198,12 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // console.log(sentence[size-1]);
 // console.log(sentence,slice(0,-1));
 
-// //if we want to make use of uppercase
+// if we want to make use of uppercase
 // console.log(sentence.
 //     toUpperCase ());
 
-// //OBJECTS AND ARRAYS-----------CONTINUING 
-// //an object has a index which has a key --if your key is "___" you would need to specify it
+// OBJECTS AND ARRAYS-----------CONTINUING 
+//------an object has a index which has a key --if your key is "___" you would need to specify it
 // let person = {
 //     name: 'Tamlin',
 //     surname: 'Geyer',
@@ -181,7 +215,7 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // console.log (person);
 // console.table(person);
 
-// //Dynamic nature of an object 
+// ---Dynamic nature of an object 
 // let person = {
 //     firstName: 'Leigh'
 //     lastName: 'San'
@@ -190,71 +224,12 @@ data.push('Matthew')*/ //will display everything but this will now be the last d
 // person.firstName = 'Tamlin'
 // console.log(person);
 
-
-// //Add a new property to the current object
+// Add a new property to the current object
 // person.age = 20
 // console.log(person);
     
-// // Make use of the dot operator
-//  console.log(person.name);
 
-// // Make use of square bracket 
-//  console.log(person['surname']);
-
-// // What if the key wasn't found 
-// console.log(person['surnames']);
-//  console.log(person.subjects.at(-1));
-
-// // With the dot operator
-//  console.log(person.ages);
-// console.log(Object.keys(person));
-// console.log(Object.values(person));
-// 
-//you can use an object : it does represent a thing, person or place. Such as a phone, car, etc
-/* --------------------------------------------O P E R A T O R S-------------------------------------------------------------------
--Operators
-- Arithmetic
-- Assignment (=) 
-- Comparison 
-- Logical operators: when we want to combine conditions 
-
-- Conditional operator: 
-we make use of the if statement to compare*/
-
-//outer if statement
-
-
-//switch -- we want to evaluate a variable 
-//alternative statement -->/
-//
-
-//--------------------------------------L O O P S ------------------------------------------------
-//Looping through arrays
-
-
-//Looping through a object 
-// let laptop = {
-//     make: 'Dell',
-//     cpu: '3Ghz',
-//     ram: '16GB'
-    
-// } 
-// /* console.log(laptop.make);
-
-// console.log(laptop.cpu);
-// console.log(laptop.ram);
-// console.log(laptop)
-
-// //to display all the keys in a loop
-// for (const key in laptop) {
-//     console.log(laptop[key])
-// }
-
-// let laptop = {
-
-// }
-// console.log(laptop);
-
+//----------------------------------------------------------------------------------------------------//
 // //console.log(Object.keys(laptop));
 // //console.log(Object.values(laptop));
 // Object.keys(laptop).forEach( (key) => {
@@ -267,7 +242,7 @@ we make use of the if statement to compare*/
 //     console.log(`${value}`);
 // })
 
-//CLoning an object using (spread operator, Object.assign(), JSON.parse(),)
+//Cloning an object(so that you don't disturb the original) using (spread operator, Object.assign(), JSON.parse(),)
 // let car1 = {
 //     make: 'Toyota',
 //     year: 2023
@@ -282,91 +257,22 @@ we make use of the if statement to compare*/
 // car2.year = 2024
 // console.log(car1, car2);
 
-//spread operator: it copies all the properties vs assignment operator: used to assign the value, variable and function to another variable
-// let car2 = {...car1}
-// console.log(car1, car2);
-// console.log("Change the value of car2"); 
-// car2.year = 2024
-// console.log(car1, car2); 
 
-// //Object.assign()
+// Object.assign()
 // let car3 = Object.assign( {}, car1) //
 // console.log("===car3===")
 // console.log(car3);
 
-// //JSON.parse(): is to exchange data to/from a web server.
+// JSON.parse(): is to exchange data to/from a web server.
 
-// // When receiving data from a web server, the data is always a string.
+// --When receiving data from a web server, the data is always a string.
 
-// // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
+// -- Parse the data with JSON.parse(), and the data becomes a JavaScript object.
 // let car4 = JSON.parse(JSON.stringify(car1)) //converting your object to a string
 // console.log(car4);
 
-/*Math methods : allows us to modify*/
-// let numbers = [2, 4, 11, 1]
-// let a = 3
-// let b = 2
-// console.log(`Highest number: ${Math.max(...numbers)}`); //... is the spread operator 
-// console.log(`Lowest number: ${Math.min(...numbers)}`);
-// // 3^2 = 3 * 3
-// console.log(`pow(x,y): ${Math.pow(a, b)}`);
-// console.dir(Math);
-//continuing..........
-let numbers = [9, 4, 2, 5, 10]
-
-// function highestNumber(arguments) {
-//     for(let number in arguments) {   //for 'of' will display the elements whereas  for 'in' will the index
-//         console.log(number);
-//     }
-// }
-// highestNumber(numbers)
-
-//longer method: 
-function highest(args) {
-    let x = args[0];
-    for(let m in args) {
-        if(args[m]>x) {
-            x=args[m]
-        }
-        //console.log(m);
-    }
-    console.log(x)
-}
-highest(numbers)
-
-//shorter method
-//numbers called a spread operator(...)
-console.log(Math.max(...numbers));
-
-Math.round() //is gonna round it off to the nearest integer
-//Strings
-// let firstName = 'Tamlin'
-// console.log(firstName.split("").reverse().join(""));
-
-/*
-Exercises on the below methods
-- charAt()
-- endsWith()
-- includes()
-- lastIndexOf()
-- indexOf()
-- replace()
-- repeat()
-- startWith()
-- subString()
-- trim()
-- trimEnd()
-- trimStart()
-- slice()
-- split() */
-
-// let rIdx = Math.floor(Math.random() * (numbers.length -1))
-// console.log(numbers);
-// console.log(rIdx);
-// console.log(numbers[rIdx]);
-
-// //map and reduce   //reduce takes two arguments x & y.  Reduce right means it starts from the right side. It returns only a single value.
-// // map allows you to show only specific data that you request to see, eg. 'id' 
+// map and reduce   //reduce takes two arguments x & y and combines all the values and gives u a single value.  Reduce right means it starts from the right side. It returns only a single value.
+// map allows you to show only specific data that you request to see, eg. 'id' 
 // let modify = numbers.map( (x)=> {
 //     return x*2             //returning the product of the elements 
 // })
@@ -375,7 +281,7 @@ Exercises on the below methods
 // let sum = numbers.reduce((a, b)=> a + b)
 // console.log(sum);
 
-// //Constructor (number, array, object)
+// Constructor (number, array, object)
 // let x = Number(2)
 // console.log(x);
 
@@ -386,17 +292,8 @@ Exercises on the below methods
 // console.log(firstName);
 
 
-// //Fetch API
 
-
-
-
-
-
-
-
-
-// //Create two objects and add the objects into an array, log the objects as well
+// Create two objects and add the objects into an array, log the objects as well:
 // let person1 = {
 //     firstName: 'Thimna'
 // }
@@ -412,8 +309,8 @@ Exercises on the below methods
 // console.log(person1);
 // console.log(person2);
 
-// //When to use an 'if' statement? 
-// // Use 'if' to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false.
+// When to use an 'if' statement? 
+// --- Use 'if' to specify a block of code to be executed, if a specified condition is true. Use else to specify a block of code to be executed, if the same condition is false. Use else if to specify a new condition to test, if the first condition is false.
 
 // let firstName = 'Zubair'
 // if(firstName) {
