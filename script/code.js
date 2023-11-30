@@ -468,24 +468,24 @@ When to use an exception handling: when to use 'TRY' and 'CATCH'
 // )
 
 // Fetch API
-let cardContainer = document.querySelector('[data-cards]') 
-fetch('https://randomuser.me/api?results=50')
-.then(data=> data.json())
-.then(result=> {
-    let {results} = result 
-    results.forEach( people =>{
-        console.log(people);
-        cardContainer.innerHTML += 
-        `
-        <div class="card" style="width: 18rem;">
-            <img src="${people.picture.large}" class="card-img-top img-fluid" alt="${people.name.first}">
-            <div class="card-body">
-            <h5 class="card-title">${people.name.title}. ${people.name.first} ${people.name.last}</h5>
-            <p class="card-text">Age: ${people.registered.age}</p>
-        </div>
-        `
-    })
-})
+// let cardContainer = document.querySelector('[data-cards]') 
+// fetch('https://randomuser.me/api?results=50')
+// .then(data=> data.json())
+// .then(result=> {
+//     let {results} = result 
+//     results.forEach( people =>{
+//         console.log(people);
+//         cardContainer.innerHTML += 
+//         `
+//         <div class="card" style="width: 18rem;">
+//             <img src="${people.picture.large}" class="card-img-top img-fluid" alt="${people.name.first}">
+//             <div class="card-body">
+//             <h5 class="card-title">${people.name.title}. ${people.name.first} ${people.name.last}</h5>
+//             <p class="card-text">Age: ${people.registered.age}</p>
+//         </div>
+//         `
+//     })
+// })
 
 // Asynchronous(ASYNC) function 
 // async function getData() {
@@ -510,3 +510,41 @@ fetch('https://randomuser.me/api?results=50')
 // display()
 
 // Host JSON file to GitHub
+
+
+// Revision: Promise and fetch
+// let myPromise = new Promise() 
+// function args(resolve, reject) {
+//    let numb1 = prompt ("Enter only a number")
+//     if(typeof numb1 == 'number')
+//       resolve(`The entered number is ${numb1}`) //if it  was resolved it will display that 
+//     reject(`Unfortunately ${numb1} is not a number`) //if its not a number or what was specified, it will reject it. 
+// }
+// //You made a promise, then what? (Making use of the then method afterwards)
+// myPromise.then(
+//     completed=> console.log(completed), //one arg. //if it was resolved its gonna catch it from here
+//     rejected=> console.log(rejected)
+  
+    
+// )
+
+//-----------------------------------Local Storage -------------------------------------
+//local storage: allows us to save data  permanently on the browser. 
+//*stores data as key-values pairs & both key & values are stored as strings
+
+//Data types:
+//*only supports key-value pairs
+//*to store non-string data types, you need to serialize & deserialize them
+
+//Domain specific:
+//*Data on the domain cannot be directly accessed by different domain due to the same origin policy 
+
+//How to convert an array into 
+//*to convert an array into a string using JSON.stringify()
+
+//Cleaning & removing items: 
+//to retrieve item== local storage.get item(getting the item)
+//to remove all the keys == .clear
+//to remove a specific key == remove item 
+
+
